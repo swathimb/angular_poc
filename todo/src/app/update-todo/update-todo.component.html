@@ -1,0 +1,6 @@
+<div class="right">
+    <h3>Update ToDo</h3>
+    <input type="text" placeholder="title" [ngModel]="todoEdit.title" #title>
+    <input type="text" placeholder="completed" [ngModel]="todoEdit.completed" #completed>
+    <button class="btn btn-primary" (click)="save(title.value,completed.value)">save</button>
+</div>

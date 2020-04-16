@@ -1,0 +1,20 @@
+<div class="right" *ngIf="todos">
+
+    <h3>Todo List</h3>
+    <ul class="list-group list-group-flush">
+      <div *ngFor="let todo of todos | async; let i = index">
+        <li class="list-group-item">
+          <div class="row">
+            <div class="col-8">
+              <div>Title: {{ todo.title }}</div>
+              <div>Completed: {{ todo.completed }}</div>
+            </div>
+            <div class="col-4 float-right">
+              <button class="btn btn-primary" routerLink="/update/{{i}}">Update</button>
+            <button class="btn btn-primary" (click)="delTodo(i)">x</button>
+            </div>
+          </div>
+        </li>
+      </div>
+    </ul>
+  </div>

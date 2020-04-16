@@ -1,0 +1,7 @@
+<div class="right">
+    <h3>Add new to List</h3>
+    <input type="text" placeholder="title" [(ngModel)]="editTodo.title">
+    <input type="text" placeholder="completed" [(ngModel)]="editTodo.completed">
+  
+    <button class="btn btn-primary" (click)="addTodo(editTodo.title,editTodo.completed)">Add</button>
+  </div>
